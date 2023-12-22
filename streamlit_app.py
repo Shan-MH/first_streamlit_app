@@ -1,3 +1,5 @@
+# FIX: can currently add duplicate of same fruit, can currently add empty string 
+
 import streamlit
 import pandas
 import requests
