@@ -66,7 +66,7 @@ def insert_row_snowflake(new_fruit):
       my_cur.execute("select fruit_name from fruit_load_list")
       my_list = my_cur.fetchall()
       my_list = streamlit.dataframe(my_list)
-      my_list = LIST(my_list)
+      my_list = my_list.value.tolist()
       streamlit.text(new_fruit in my_list)
      # my_cur.execute("insert into fruit_load_list values ('" + new_fruit + "')")
       return my_cur.fetchall() #"Thanks for adding " + new_fruit
